@@ -49,7 +49,7 @@ const app = express();
 //
 //
 app.get("/", (req, res) => {
-  res.render("index.ejs", { name: "pranay bhoir" });
+  res.render("index.ejs", { name: "Pranay Bhoir" });
 });
 
 app.listen(5000, () => {
