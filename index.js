@@ -9,7 +9,7 @@
 // console.log(myName);
 // console.log(generateMarks());
 // // const server = http.createServer((req, res) => {
-// //   res.end("<h1>Noice</h1>"); // return html to the browser
+// //   res.end("<h1>Nice</h1>"); // return html to the browser
 // // });
 // const home = fs.readFileSync("./index.html");
 //
@@ -48,8 +48,32 @@ const app = express();
 //   // res.sendFile(path.join(pathLocation, "./index.html")); // this is the way we can send a file to the client.
 //
 //
+//Using middlewares
+//Middleware is a function that acts as an intermediary between a client's request and the server's response. It's placed between layers of software and can process, modify, or augment requests.
+app.use(express.static(path.join(path.resolve(), "public")));
+app.use(express.urlencoded({ extended: true }));
+const user = [];
+
 app.get("/", (req, res) => {
   res.render("index.ejs", { name: "Pranay Bhoir" });
+});
+
+app.get("/success", (req, res) => {
+  res.render("success.ejs");
+});
+
+// API with POST method
+app.post("/", (req, res) => {
+  // console.log(req.body);
+  user.push({ userName: req.body.name, email: req.body.email });
+  res.redirect("/success");
+});
+
+// sent json data to the client side
+app.get("/users", (req, res) => {
+  res.json({
+    user,
+  });
 });
 
 app.listen(5000, () => {
