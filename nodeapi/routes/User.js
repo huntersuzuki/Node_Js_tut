@@ -25,8 +25,8 @@ router.get("/userid", getUserById);
 
 router
   .route("/userid/:userID")
-  .get("/userid/:userID", getUserByDynamicId)
-  .put("/userid/:userID", updateUser)
-  .delete("/userid/:userID", deleteUser);
+  .get(getUserByDynamicId)
+  .put(updateUser)
+  .delete(deleteUser);
 
 export default router;
