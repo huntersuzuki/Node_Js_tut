@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <h1>Login Now</h1>
+    <main>
+        <form method="post" action="/login">
+            <input type="email" name="email" placeholder="Enter Email Address"/>
+            <input type="password" name="password" placeholder="Enter your password" />
+            <p class="error"><%= locals.message %></p>
+            <button type="submit">Login</button>
+        </form>
+    </main>
+</div>
+</body>
+</html>
