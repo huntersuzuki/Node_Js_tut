@@ -1,0 +1,15 @@
+{
+  "name": "rest-api-development",
+  "version": "1.0.0",
+  "description": "Learning rest api in node js",
+  "license": "ISC",
+  "author": "pranay bhoir",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
