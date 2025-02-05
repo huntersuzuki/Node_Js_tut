@@ -2,7 +2,7 @@
 
 ---
 
-# Node.js Learning Repository
+# Node.js Learning Repository Part 1
 
 Welcome to my **Node.js Learning Repository**! 🚀 This repository chronicles my journey of learning Node.js, from foundational concepts to advanced techniques. Each section includes practical examples, mini-projects, and real-world use cases to strengthen understanding.
 
